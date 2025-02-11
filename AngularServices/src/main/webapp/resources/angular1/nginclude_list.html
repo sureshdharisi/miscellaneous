@@ -1,0 +1,16 @@
+<br/>
+	<br/>
+	<div>
+		Employees List:
+	</div>
+	<br/>
+	<ul>
+		<li ng-repeat="employee in empBasicDetails">
+			{{employee.name }}
+			<ul>
+				<li>{{employee.gender 	}}</li>
+				<li>{{employee.salary | number:2 	}}</li>
+			</ul>
+		</li>
+	</ul>
+	

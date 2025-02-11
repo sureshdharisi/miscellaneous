@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="/AngularServices/css/Style.css" rel="stylesheet">
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/filters.js"></script>
+</head>
+<body ng-app="filtersModule">
+<div ng-controller="filtersController">
+	<div>
+	Table data without filters:
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Date of birth</th>
+				<th>Gender</th>
+				<th>Salary</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="employee in employees">
+				<td>{{employee.name}}</td>
+				<td>{{employee.dateOfBirth}}</td>
+				<td>{{employee.gender}}</td>
+				<td>{{employee.salary}}</td>
+			</tr>
+		</tbody>
+		
+	</table>
+	<div>
+	Table data with filters:<br/>
+	
+	name is upper case<br/>
+	gender is lower case <br/>
+	Date format
+	
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Date of birth</th>
+				<th>Gender</th>
+				<th>Salary (number)</th>
+				<th>Salary (Currency)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="employee in employees">
+				<td>{{employee.name | uppercase}}</td>
+				<td>{{employee.dateOfBirth | date: dd/MM/YYYY}}</td>
+				<td>{{employee.gender | lowercase	}}</td>
+				<td>{{employee.salary | number : 2}}</td>
+				<td>{{employee.salary | currency: "₹"}}</td>
+			</tr>
+		</tbody>
+		
+	</table>
+	
+	<div>
+		Table data with filters with limited records:<br/>
+		
+		Row limit: <input type="number" step="1" min="0" max="5" ng-model="rowLimit" value="1">
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Date of birth</th>
+				<th>Gender</th>
+				<th>Salary (number)</th>
+				<th>Salary (Currency)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="employee in employees | limitTo: rowLimit">
+				<td>{{employee.name | uppercase}}</td>
+				<td>{{employee.dateOfBirth | date: dd/MM/YYYY}}</td>
+				<td>{{employee.gender | lowercase	}}</td>
+				<td>{{employee.salary | number : 2}}</td>
+				<td>{{employee.salary | currency: "₹"}}</td>
+			</tr>
+		</tbody>
+		
+	</table>
+	
+</div>
+<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+</body>
+</html>

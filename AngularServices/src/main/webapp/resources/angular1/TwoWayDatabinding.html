@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/twowaybinding.js"></script>
+</head>
+<body ng-app="twowaybindingModule">
+	<div ng-controller="twowaybindingController">
+		Message Model : <input type="text" ng-model="message" ></input>
+		<br/>
+		<br/>
+		{{message}}
+		<br/>
+		<br/>
+		Greeting Model : <input type="text" ng-model="greeting" ></input>
+		<br/>
+		<br/>
+		{{greeting}}
+		
+		<br/>
+		<br/>
+		Complex data model:
+		<br/>
+		<br/>
+		<table>
+			<tr>
+				<td> First Name</td>
+				
+				<td>
+					<input type="text" ng-model="emp.firstName" ></input>
+				</td>
+				<td>
+					{{emp.firstName}}
+				</td>
+			</tr>
+			<tr>
+				<td> Last Name</td>
+				
+				<td>
+					<input type="text" ng-model="emp.lastName" ></input>
+				</td>
+				<td>
+					{{emp.lastName}}
+				</td>
+			</tr>
+			<tr>
+				<td> Gender</td>
+				
+				<td>
+					<input type="text" ng-model="emp.gender" ></input>
+				</td>
+				<td>
+					{{emp.gender}}
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+</body>
+</html>

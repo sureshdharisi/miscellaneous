@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/ngrepeat.js"></script>
+</head>
+<body ng-app="ngrepeatModule">
+	<div ng-controller="ngrepeatController">
+	
+	<table>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Gender Name</th>
+				<th>Salary</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="employee in emps">
+				<td>{{employee.firstName}}</td>
+				<td>{{employee.lastName}}</td>
+				<td>{{employee.gender}}</td>
+				<td>{{employee.sal}}</td>
+			</tr>
+		</tbody>
+		
+	</table>
+	<br/>
+	<br/>
+	Nested ng-repeat:
+	<br/>
+	<br/>	
+	<ul >
+		<li ng-repeat= "country in countries" >{{country.name}}
+			<ul>
+				<li ng-repeat="city in country.cities"> {{city.name}}</li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+	
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="/AngularServices/css/Style.css" rel="stylesheet">
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/angularservices.js"></script>
+	
+	<script src="/AngularServices/resources/angular1/scripts/customservicefactory.js"></script>
+	
+</head>
+<body>
+	<div  ng-app="custommodule" ng-controller="customcontroller">
+	
+	<table>
+		<tr>
+			<td> Your String </td>
+			<td><input type="text" ng-model="input"> </td>
+		</tr>
+		<tr>
+			<td> Result </td>
+			<td><input type="text" ng-model="output"> </td>
+		</tr>
+		<tr>
+			<td>  </td>
+			<td><input type="button" value="Process String" ng-click="transformString(input)"> </td>
+		</tr>
+	</table>
+	<br/>
+	<br/>
+	<table>
+		<tr>
+			<td> Your String </td>
+			<td><input type="text" ng-model="input1"> </td>
+		</tr>
+		<tr>
+			<td> Result </td>
+			<td><input type="text" ng-model="output1"> </td>
+		</tr>
+		<tr>
+			<td>  </td>
+			<td><input type="button" value="Process String" ng-click="transform(input)"> </td>
+		</tr>
+	</table>
+	
+	</div>
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+	
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="twowaybinding">
+<head>
+<meta charset="ISO-8859-1">
+	<title>Hello World</title>
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/customDataBinding.js"></script>
+</head>
+<body>
+	<div ng-controller="twowaycontroller">
+		Welcome message is  "{{message}}"
+		<br/>
+		<br/>
+		<br/>
+		<input type="text" ng-model="message" />
+	</div>
+	
+	<div ng-controller="twowaycontroller">
+		
+		<br/>
+		<br/>
+		<br/>
+		<input type="text" ng-model="greeting" />
+		<br/>
+		<br/>
+		{{greeting}}
+	</div>
+	
+	<div ng-controller="twowaycontroller">
+		<table>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" ng-model="emp.firstName" /></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" ng-model="emp.lastName" /></td>
+			</tr>
+		</table>
+		<br/>
+		<table>
+			<tr>
+				<td>First Name:</td>
+				<td>{{emp.firstName}} </td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td>{{emp.lastName}}</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div ng-controller="twowaycontroller">
+		<table ng-model="emp">
+			<tr>
+				<td>First Name:</td>
+				<td>{{emp.firstName}} </td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td>{{emp.lastName}}</td>
+			</tr>
+		</table>
+	</div>
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+	
+</body>
+</html>

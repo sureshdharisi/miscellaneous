@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="/AngularServices/css/Style.css" rel="stylesheet">
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/controllerassyntax.js"></script>
+</head>
+<body  ng-app="nestedModule">
+	<div  ng-controller="countryController">
+		<h1>Hierarchy using $scope Object</h1>
+		<div><h2>{{name}}</h2></div>
+		<div  ng-controller="stateController">
+		<div><h2>{{$parent.name}}</h2>-<h3>{{name}}</h3></div>
+		</div>
+		<div  ng-controller="cityController">
+		<div><h2>{{$parent.$parent.name}}</h2>-<h3>{{$parent.name}}</h3>-<h4>{{name}}</h4></div>
+		</div>
+	</div>
+	
+	<div  ng-controller="countryAsController as country">
+		<h1>Hierarchy using 'this' Object</h1>
+		<div><h2>{{country.name}}</h2></div>
+		<div  ng-controller="stateAsController as state">
+		<div><h2>{{country.name}}</h2>-<h3>{{state.name}}</h3></div>
+		</div>
+		<div  ng-controller="cityAsController as city">
+		<div><h2>{{country.name}}</h2>-<h3>{{state.name}}</h3>-<h4>{{city.name}}</h4></div>
+		</div>
+	</div>
+	
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+	
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="/AngularServices/css/Style.css" rel="stylesheet">
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/angularservices.js"></script>
+</head>
+<body>
+	<div  ng-app="angularservciesmodule" ng-controller="angularservicescontroller">
+	<div>Data from REST services using configuration object</div>
+	<br/>
+	{{error}}
+	<br/>
+	<table>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Gender Name</th>
+				<th>Salary</th>
+				<th>City</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="employee in employees">
+				<td>{{employee.name}}</td>
+				<td>{{employee.gender}}</td>
+				<td>{{employee.salary}}
+				<td>{{employee.city}}</td>
+			</tr>
+		</tbody>
+		
+	</table>
+	
+	</div>
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+	
+</body>
+</html>

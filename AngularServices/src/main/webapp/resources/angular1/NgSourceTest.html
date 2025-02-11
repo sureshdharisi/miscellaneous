@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="ngsrcModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/ImageModule.js"></script>
+</head>
+<body>
+	<div ng-controller="ngSrcController">
+		<table>
+			<tr>
+				<td> Image without angular </td>
+				
+				<td>
+					<img alt="Image without angular" src="/AngularServices/Images/infinite.png" style="height: 200px; width: 200px" />
+				</td>
+				
+			</tr>
+			
+			<tr>
+				<td> Image with angular </td>
+				
+				<td>
+					<img alt="{{company.name}}" ng-src="{{company.flag}}" style="height: 200px; width: 200px" />
+				</td>
+				
+			</tr>
+		
+		</table>
+	</div>
+	
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+</body>
+</html>

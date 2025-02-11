@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="/AngularServices/css/Style.css" rel="stylesheet">
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/AngularEvents.js"></script>
+</head>
+<body ng-app="eventModule">
+	<div ng-controller="eventController">
+	
+	<table>
+		<thead>
+			<tr>
+				<th>Technology</th>
+				<th>Likes</th>
+				<th>Dislikes</th>
+				<th>Like/Dislike</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="technology in technos">
+				<td>{{technology.name}}</td>
+				<td>{{technology.likes}}</td>
+				<td>{{technology.dislikes}}</td>
+				<td>
+					<input type="button" value="Like" ng-click="incrementLikes(technology)" />
+					<input type="button" value="DisLike" ng-click="incrementDisLikes(technology)" />
+				</td>
+			</tr>
+		</tbody>
+		
+	</table>
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+	
+</body>
+</html>

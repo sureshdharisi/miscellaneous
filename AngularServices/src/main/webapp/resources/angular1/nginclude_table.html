@@ -1,0 +1,22 @@
+<br/>
+	<br/>
+	<div>
+		Employees without filter:
+	</div>
+	<br/>
+	<table>
+		<thead>
+			<tr >
+				<th width="20%">Name </th>
+				<th width="20%">Gender </th>
+				<th width="20%">Salary (number) </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="employee in empBasicDetails">
+				<td>{{employee.name }}</td>
+				<td>{{employee.gender 	}}</td>
+				<td>{{employee.salary | number:2}}</td>
+			</tr>
+		</tbody>
+	</table>

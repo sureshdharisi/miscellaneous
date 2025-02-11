@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="/AngularServices/css/scroll.css" rel="stylesheet">
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/countryservice.js"></script>
+</head>
+<body  ng-app="countryModule" ng-controller="countryController">
+	<br/>
+		<span ng-repeat="country in countries">
+			<button  ng-click="scrollTo(country.name)">{{country.name}}</button>
+		</span>
+		<br/><br/>
+		<div >
+			<fieldset ng-repeat="country in countries" id="{{country.name}}">
+				<legend >{{country.name}}</legend>
+				<ul>
+					<li ng-repeat="city in country.cities">{{city}}</li>
+				</ul>
+			</fieldset>
+		</div>
+	
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+	
+</body>
+</html>

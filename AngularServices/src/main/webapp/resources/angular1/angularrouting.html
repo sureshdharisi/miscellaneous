@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="/AngularServices/css/template.css" rel="stylesheet">
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/angular-route.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/routing.js"></script>
+</head>
+<body ng-app="routingModule">
+	<table>
+		<tr>
+			<td colspan="2" class="header">
+				<h1>
+					Website Header
+				</h1>
+			</td>
+		</tr>
+		<tr>
+			<td  class="leftMenu">
+				<a href="#/home">Home</a>
+				<a href="#/courses">Courses</a>
+				<a href="#/students">Students</a>
+			</td>
+			<td  class="mainContent">
+				<ng-view></ng-view>
+			</td>
+			<tr>
+			<td colspan="2" class="header">
+				<h1>
+					Website Footer
+				</h1>
+			</td>
+		</tr>
+	</table>
+	
+	<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+</body>
+</html>

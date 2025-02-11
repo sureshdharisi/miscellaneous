@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="/AngularServices/css/Style.css" rel="stylesheet">
+	<script src="/AngularServices/angular.js"></script>
+	<script src="/AngularServices/resources/angular1/scripts/rawjsons.js"></script>
+</head>
+<body ng-app="jsonsModule">
+<div ng-controller="jsonsController" >
+	<table>
+		<tr>
+			<td>
+				Include another html
+				<div ng-include="'nginclude_table.html'"></div>
+			</td>
+			<td>
+				Include html using $scope reference
+				<div ng-include="includeDetailsView"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Select: <select ng-model="selectView">
+							<option value="{{includeDetailsView}}" selected="selected">Table</option>
+							<option value="{{includeDetailsListView}}">List</option>
+				</select>
+			</td>
+			<td>
+				Include htmls using select option:
+				<div ng-include="selectView"></div>
+			</td>
+		</tr>
+	</table>
+</div>	
+<br/>
+	<a href="/AngularServices/resources/angular1/angular1_index.html">Angular1 Home</a>
+</body>
+</html>
